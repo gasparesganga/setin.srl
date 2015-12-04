@@ -1,0 +1,147 @@
+// Page "azienda"
+#azienda_video_outer {
+    margin-top      : 3rem;
+    margin-bottom   : 3rem;
+    @include typography_lr_padding();
+}    
+#azienda_video_inner {
+    position    : relative;
+    width       : 700px;
+    height      : 394px;
+    margin      : 0 auto;
+    overflow    : hidden;
+    @media ($query_mobile_width_1), ($query_mobile_height_1) {
+        width           : 100%;
+        height          : 0;
+        padding-bottom  : 56.25%;
+    }
+    iframe {
+        position    : absolute;
+        top         : 0;
+        left        : 0;
+        width       : 100%;
+        height      : 100%;
+    }
+}
+
+
+
+// Page "lavori"
+.lavori_wrapper_outer {
+    display     : flex;
+    flex-flow   : column nowrap;
+    margin      : 0rem 3rem;
+    @media ($query_mobile_width_1), ($query_mobile_height_1) {
+        margin : 0rem 2rem;
+    }
+}
+.lavori_wrapper_8 {
+    flex        : 0 0 auto;
+    display     : flex;
+    flex-flow   : row nowrap;
+    @media ($query_mobile_width_0) {
+        flex-flow   : column nowrap;
+    }
+}
+.lavori_wrapper_4 {
+    flex        : 0 0 auto;
+    display     : flex;
+    flex-flow   : row nowrap;
+    width       : 50%;
+    @media ($query_mobile_width_0) {
+        width       : 100%;
+    }
+    @media ($query_mobile_width_2) {
+        flex-flow   : column nowrap;
+    }
+}
+.lavori_wrapper_2 {
+    flex        : 0 0 auto;
+    display     : flex;
+    flex-flow   : row nowrap;
+    width       : 50%;
+    @media ($query_mobile_width_2) {
+        width       : 100%;
+    }
+    @media ($query_mobile_width_8) {
+        flex-flow   : column nowrap;
+    }
+}
+.lavori_wrapper_1 {
+    flex                : 0 0 auto;
+    display             : flex;
+    flex-flow           : column nowrap;
+    width               : 50%;
+    font                : 1.4rem/1.2 $lavori_font;
+    text-align          : center;
+    padding             : 1.5rem;
+    padding-bottom      : 1rem;
+    background-color    : $lavori_background;
+    border              : 1px solid $lavori_border;
+    color               : $lavori_color;
+    transition          : none;
+    @media ($query_mobile_width_8) {
+        width       : 100%;
+    }
+    &:hover {
+        background-color    : $lavori_background_hover;
+        border              : 1px solid $lavori_border;
+    }
+    &:active {
+        background-color    : $lavori_background_active;
+    }
+    img {
+        display     : block;
+        width       : 70%;
+        max-width   : 7.5rem;
+        margin      : auto;
+    }
+    span {
+        display     : block;
+        margin-top  : 1rem;
+        min-height  : 3rem;
+    }
+}
+
+
+
+// Page "contatti"
+#contacts_info {
+    display         : flex;
+    flex-flow       : row nowrap;
+    padding-top     : 0.8rem;
+    padding-bottom  : 0.8rem;
+    @media ($query_mobile_width_1) {
+        flex-flow   : column nowrap;
+    }
+    & > div {
+        flex    : 1 0 auto;
+        @include typography_lr_padding();
+    }
+    section {
+        display     : flex;
+        flex-flow   : row nowrap;
+        align-items : center;
+        padding     : 0.5rem;
+        h3 {
+            color           : $color_main;
+            font-size       : 1.2rem;
+            font-weight     : 600;
+            letter-spacing  : 0;
+            text-align      : left;
+            margin          : 0;
+            padding         : 0;
+            border          : none;
+        }
+        svg {
+            fill            : $color_text;
+            width           : 1.4rem;
+            margin-right    : 0.8rem;
+        }
+    }
+}
+
+#contacts_map {
+    width           : 100%;
+    height          : 30rem;
+}

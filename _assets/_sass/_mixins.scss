@@ -1,0 +1,52 @@
+@mixin menu_item_style() {
+    display             : block;
+    font                : 2rem/0.75 $font_menu;
+    text-align          : left;
+    padding             : 0.9rem 2.5rem;
+    cursor              : pointer;
+    background-color    : $color_menu_background;
+    transform           : skewX(-13deg);
+    &:hover {
+        background-color    : $color_menu_hover;
+    }
+    &:active {
+        background-color    : $color_menu_active;
+    }
+    @media ($query_mobile_width_1), ($query_mobile_height_1) {
+        padding : 0.75rem 2.3rem;
+    }
+    @media ($query_mobile_width_7) {
+        padding : 0.75rem 2rem;
+    }
+}
+
+@mixin menu_toggle_size($width) {
+    width       : $width;
+    margin-left : -($width - 6rem);
+}
+
+@mixin menu_item_size($width) {
+    width       : $width;
+    margin-left : -($width + 1rem);
+}
+
+
+@mixin footer_items_mobile_size_2() {
+    @media ($query_mobile_width_2) {
+        flex    : 1 0 auto;
+        margin  : 0;
+        padding : 0;
+    }
+}
+
+
+@mixin typography_lr_padding() {
+    padding-left    : 3rem;
+    padding-right   : 3rem;
+    @media ($query_mobile_width_1), ($query_mobile_height_1) {
+        padding-left    : 2rem;
+        padding-right   : 2rem;
+    }
+}
+
+

@@ -1,0 +1,34 @@
+title       : Se.T.In. snc
+description : Realizzazione Geoportali Comunali e servizi di elaborazione cartografica, rilievo e rappresentazione del territorio per Enti e Professionisti.
+url         : http://www.setinsnc.it
+author      : Gaspare Sganga
+markdown    : kramdown
+kramdown    :
+  input : GFM
+
+include : 
+  - _pages
+exclude :
+  - browserslist
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+gems :
+  - jekyll-assets
+  - autoprefixer-rails
+  - uglifier
+
+assets : 
+  assets    : ["[^_]*"]
+  sources   : [_assets]
+  prefix    : /assets
+  cache     : false
+  digest    : true
+  compress  :
+    js  : true
+    css : true
+  features:
+    automatic_img_size  : false
+    automatic_img_alt   : false

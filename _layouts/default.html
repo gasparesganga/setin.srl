@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+        <meta name="author" content="{{ site.author }}">
+        <meta name="generator">
+        
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="icon" href="{% asset_path img/favicon.ico %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,400italic">
+        {% stylesheet css/style.scss %}
+    </head>
+    
+    <body>
+        <header>
+            <nav id="header_menu">
+                <input type="checkbox" id="header_menu_checkbox">
+                <label id="header_menu_toggle" for="header_menu_checkbox">
+                    <span id="header_menu_toggle_icon"></span>&nbsp;
+                </label>
+                <label id="header_menu_overlay" for="header_menu_checkbox">
+                    {% include menu.html %}
+                </label>
+                <div id="header_spacing"></div>
+            </nav>
+            
+            <div id="header_logo">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 19794 2314">
+                        <defs>
+                            <linearGradient id="lg0" gradientUnits="userSpaceOnUse" x1="10783.2" y1="1940.99" x2="9371.33" y2="427.258">
+                                <stop offset="0" stop-color="#434242"/>
+                                <stop offset="0.129412" stop-color="#434242"/>
+                                <stop offset="0.290196" stop-color="#434242"/>
+                                <stop offset="0.501961" stop-color="#D9DADA"/>
+                                <stop offset="0.541176" stop-color="#FEFEFE"/>
+                                <stop offset="0.568627" stop-color="#FDFDFD"/>
+                                <stop offset="0.909804" stop-color="#434242"/>
+                                <stop offset="1" stop-color="#434242"/>
+                            </linearGradient>
+                            <linearGradient id="lg1" gradientUnits="userSpaceOnUse" x1="11173.1" y1="1538.34" x2="9476.75" y2="1177.94">
+                                <stop offset="0" stop-color="#434242"/>
+                                <stop offset="0.129412" stop-color="#434242"/>
+                                <stop offset="0.290196" stop-color="#9D9E9E"/>
+                                <stop offset="0.501961" stop-color="#D9DADA"/>
+                                <stop offset="0.541176" stop-color="#FEFEFE"/>
+                                <stop offset="0.568627" stop-color="#FDFDFD"/>
+                                <stop offset="0.909804" stop-color="#898989"/>
+                                <stop offset="1" stop-color="#434242"/>
+                            </linearGradient>
+                            <linearGradient id="lg2" gradientUnits="userSpaceOnUse" x1="11031.4" y1="254.784" x2="9856.43" y2="1814.36">
+                                <stop offset="0" stop-color="#434242"/>
+                                <stop offset="0.129412" stop-color="#434242"/>
+                                <stop offset="0.290196" stop-color="#727271"/>
+                                <stop offset="0.501961" stop-color="#D9DADA"/>
+                                <stop offset="0.541176" stop-color="#FEFEFE"/>
+                                <stop offset="0.568627" stop-color="#FDFDFD"/>
+                                <stop offset="0.909804" stop-color="#898989"/>
+                                <stop offset="1" stop-color="#434242"/>
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <path id="header_logo_p1" fill="#660000" d="M328 380c26,0 53,0 79,0 -109,527 -220,1053 -333,1576 -25,0 -49,0 -74,0 104,-531 223,-1046 328,-1576z"/>
+                            <path id="header_logo_p2" fill="#660000" d="M1454 380c115,0 229,0 344,0 -109,527 -220,1053 -333,1576 -113,0 -226,0 -339,0 104,-531 223,-1046 328,-1576z"/>
+                            <path id="header_logo_p3" fill="#660000" d="M2713 380c176,0 353,0 529,0 -109,527 -220,1053 -333,1576 -174,0 -349,0 -524,0 104,-531 223,-1046 328,-1576z"/>
+                            <path id="header_logo_p4" fill="#660000" d="M4061 380c259,0 518,0 777,0 -109,527 -220,1053 -333,1576 -257,0 -515,0 -772,0 104,-531 223,-1046 328,-1576z"/>
+                            <path id="header_logo_p5" fill="#660000" d="M5558 380c360,0 719,0 1079,0 -109,527 -220,1053 -333,1576 -358,0 -716,0 -1074,0 104,-531 223,-1046 328,-1576z"/>
+                            <path id="header_logo_p6" fill="#660000" d="M19794 1946c1,6 -1,10 -5,11 -4315,0 -8631,0 -12946,0 104,-531 223,-1046 328,-1576 4208,0 8415,0 12623,0 0,522 0,1044 0,1566z"/>
+                            <path fill="#FFFFFF" d="M12140 1257l-138 -279c-20,-41 -33,-86 -38,-134 -5,-33 -6,-65 -3,-96 3,-31 9,-60 18,-88 15,-50 39,-92 73,-124 34,-33 73,-53 118,-59l6 0 -36 -99c-45,9 -86,28 -123,57 -37,29 -68,65 -93,108 -25,43 -43,91 -54,145 -11,54 -13,110 -6,168 7,61 24,117 49,170l135 279c11,25 21,52 28,80 7,28 12,58 13,90 3,32 1,61 -6,89 -7,41 -19,79 -35,114 -16,35 -34,66 -55,92 -21,26 -44,48 -69,64 -26,16 -52,27 -78,31l34 97c54,-13 104,-41 149,-84 46,-43 84,-96 114,-161 16,-37 28,-76 37,-118 8,-41 11,-85 8,-131 -3,-38 -8,-75 -15,-111 -7,-36 -19,-69 -34,-99zm1320 204l0 0 -90 0 0 83 90 0 0 415 317 0 0 -83 -218 0 0 -332 169 0 0 -83 -169 0 0 -1001 220 0 0 -83 -319 0 0 1084zm1600 -1001l0 0 148 0 0 1498 100 0 0 -1498 148 0 0 -83 -396 0 0 83zm1669 1498l0 0 100 0 0 -1581 -100 0 0 1581zm1692 -1581l0 0 1 1103 -198 -1103 -99 0 0 1581 99 0 0 -1076 197 1072 0 4 100 0 0 -1581 -100 0z"/>
+                            <g id="_569293488">
+                                <polygon fill="url(#lg0)" points="10842,1440 9830,523 9681,387 9265,2314 9121,2173 9574,55 11034,1378 "/>
+                                <polygon fill="url(#lg1)" points="9830,523 9542,1858 9499,2054 11376,1451 11326,1647 9265,2314 9681,387 "/>
+                                <polygon fill="url(#lg2)" points="10842,1440 11034,1378 9574,55 9767,0 11376,1451 9499,2054 9542,1858 "/>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </header>
+        
+        <main>
+            {{ content }}
+        </main>
+        
+        <footer>
+            <nav id="footer_menu">
+                {% include menu.html %}
+            </nav>
+            
+            <div id="footer_contacts">
+                <h4>Se.T.In. snc</h4>
+                <section>Via Renato Guttuso, 8<br>87100 Cosenza (CS)</section>
+                <section><span>Tel/Fax</span><b>(+39) 0984 395596</b></section>
+                <section><span>E-mail</span><b>info@setinsnc.it</b></section>
+            </div>
+            
+            <div id="footer_final">
+                <section>© 2015 Se.T.In.snc</section>
+            </div>
+        </footer>
+    </body>
+</html>

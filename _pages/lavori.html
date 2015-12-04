@@ -1,0 +1,31 @@
+---
+layout      : default
+title       : Lavori
+permalink   : /lavori/
+---
+
+<h1>Geoportali Comunali realizzati</h1>
+
+<div class="lavori_wrapper_outer">
+    {% for item in site.data.lavori %}
+        {% assign mod8 = forloop.index0 | modulo:8 %}
+        {% assign mod4 = forloop.index0 | modulo:4 %}
+        {% assign mod2 = forloop.index0 | modulo:2 %}
+        
+        {% if forloop.index0 > 0 and mod2 == 0 %}</div>{% endif %}
+        {% if forloop.index0 > 0 and mod4 == 0 %}</div>{% endif %}
+        {% if forloop.index0 > 0 and mod8 == 0 %}</div>{% endif %}
+        
+        {% if mod8 == 0 %}<div class="lavori_wrapper_8">{% endif %}
+        {% if mod4 == 0 %}<div class="lavori_wrapper_4">{% endif %}
+        {% if mod2 == 0 %}<div class="lavori_wrapper_2">{% endif %}
+            <a class="lavori_wrapper_1" href="https://{{ item[0] }}.geo-portale.it" target="_blank">
+                {% capture img_path %}'img/lavori/'{{ item[0] }}'.png'{% endcapture %}
+                {{ img_path | image }}
+                <span>{{ item[1] }}</span>
+            </a>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+</div>

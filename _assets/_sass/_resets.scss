@@ -1,0 +1,132 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  _resets.scss  v0.1
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 2015 xxxxxxxxxxxx
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+*, *:before, *:after {
+    -moz-box-sizing     : border-box;
+    -webkit-box-sizing  : border-box;
+    box-sizing          : border-box;
+}
+*:focus {
+    outline : 0;
+}
+
+html {
+    -ms-text-size-adjust        : 100%;
+    -webkit-text-size-adjust    : 100%;
+    margin                      : 0;
+    padding                     : 0;
+}
+
+body {
+    margin  : 0;
+    padding : 0;
+}
+body > *:first-child {
+    margin-top      : 0 !important;
+}
+body > *:last-child {
+    margin-bottom   : 0 !important;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, 
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, hr, dl, dd, ol, ul {
+    display : block;
+    margin  : 0;
+    padding : 0;
+}
+
+a, a:active, a:hover {
+    background-color    : transparent;
+    border              : none;
+    outline             : 0;
+}
+
+b, strong {
+    font-weight : bold;
+}
+
+img {
+    border  : none;
+    outline : none;
+}
+
+svg:not(:root) {
+    overflow    : hidden;
+}
+
+sub, sup {
+    font-size       : 75%;
+    line-height     : 0;
+    position        : relative;
+    vertical-align  : baseline;
+}
+sup {
+    top     : -0.5em;
+}
+sub {
+    bottom  : -0.25em;
+}
+
+button, input, optgroup, select, textarea {
+    color   : inherit;
+    font    : inherit;
+    margin  : 0;
+}
+
+button {
+  overflow          : visible;
+  text-transform    : none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance  : button;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border  : 0;
+    padding : 0;
+}
+
+select {
+    text-transform  : none;
+}
+
+input {
+    line-height : normal;
+}
+
+textarea {
+    overflow    : auto;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    padding : 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    height  : auto;
+}
+
+optgroup {
+    font-weight : bold;
+}
