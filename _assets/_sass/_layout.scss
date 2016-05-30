@@ -84,14 +84,17 @@ header {
             @include menu_item_style();
             @include menu_toggle_size(26rem);
             position    : relative;
+            padding     : 0.9rem 2.5rem;
             transition  : 0s margin-left;
             z-index     : 200;
             user-select : none;
             @media ($query_mobile_width_1), ($query_mobile_height_1) {
                 @include menu_toggle_size(23rem);
+                padding : 0.75rem 2.3rem;
             }
             @media ($query_mobile_width_7) {
                 @include menu_toggle_size(19rem);
+                padding : 0.75rem 2rem;
             }
         }
             #header_menu_toggle_icon {
@@ -170,8 +173,15 @@ header {
                 width       : 100%;
                 color       : $color_menu_text;
                 border      : none;
+                padding     : 0.9rem 2.5rem;
                 transition  : none;
                 transform   : skewX(13deg);
+                @media ($query_mobile_width_1), ($query_mobile_height_1) {
+                    padding : 0.75rem 2.3rem;
+                }
+                @media ($query_mobile_width_7) {
+                    padding : 0.75rem 2rem;
+                }
             }
         }
         #header_spacing {

@@ -2,7 +2,6 @@
     display             : block;
     font                : 2rem/0.75 $font_menu;
     text-align          : left;
-    padding             : 0.9rem 2.5rem;
     cursor              : pointer;
     background-color    : $color_menu_background;
     transform           : skewX(-13deg);
@@ -11,12 +10,6 @@
     }
     &:active {
         background-color    : $color_menu_active;
-    }
-    @media ($query_mobile_width_1), ($query_mobile_height_1) {
-        padding : 0.75rem 2.3rem;
-    }
-    @media ($query_mobile_width_7) {
-        padding : 0.75rem 2rem;
     }
 }
 
