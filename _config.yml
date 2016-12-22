@@ -1,6 +1,6 @@
 title       : SETIN S.r.l.
 description : Realizzazione Geoportali Comunali e servizi di elaborazione cartografica, rilievo e rappresentazione del territorio per Enti e Professionisti.
-url         : http://www.setinsnc.it
+url         : http://www.setin.srl
 author      : Gaspare Sganga - http://gasparesganga.com
 markdown    : kramdown
 kramdown    :
@@ -33,6 +33,6 @@ assets :
     css                 : true
   features:
     automatic_img_size  : false
-    automatic_img_alt   : false
+    automatic_img_alt   : true
     liquid              : false
     integrity           : false

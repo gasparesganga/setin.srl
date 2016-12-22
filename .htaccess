@@ -23,5 +23,5 @@ RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 
 ########## Invalid URLs ##########
-ErrorDocument 403 http://www.setinsnc.it
-ErrorDocument 404 http://www.setinsnc.it
+ErrorDocument 403 http://www.setin.srl
+ErrorDocument 404 http://www.setin.srl
