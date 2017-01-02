@@ -39,12 +39,12 @@ permalink   : /contatti/
 <script>
     function InitMap(){
         var map = new google.maps.Map(document.getElementById("contacts_map"), {
+            mapTypeId   : google.maps.MapTypeId.ROADMAP,
+            zoom        : 18,
             center      : {
                 lat : 39.304580,
                 lng : 16.247521
-            },
-            zoom        : 18,
-            mapTypeId   : google.maps.MapTypeId.ROADMAP
+            }
         });
         var service = new google.maps.places.PlacesService(map);
         service.getDetails({
@@ -59,4 +59,5 @@ permalink   : /contatti/
         });
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=InitMap" async defer></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq-0z3jD2cgeLfVJF-bCzW4wURwCL34kA&libraries=places&callback=InitMap" async defer></script>
