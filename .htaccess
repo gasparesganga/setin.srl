@@ -23,10 +23,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
-### Redirect HTTP to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
-
 
 ########## Invalid URLs ##########
 ErrorDocument 403 {{ site.url }}
