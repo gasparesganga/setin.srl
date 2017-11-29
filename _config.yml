@@ -1,7 +1,8 @@
 title       : SETIN S.r.l.
 description : Realizzazione Geoportali Comunali e servizi di elaborazione cartografica, rilievo e rappresentazione del territorio per Enti e Professionisti.
 url         : https://www.setin.srl
-author      : Gaspare Sganga - http://gasparesganga.com
+email       : "&#105;&#110;&#102;&#111;&#64;&#115;&#101;&#116;&#105;&#110;&#46;&#115;&#114;&#108;"
+author      : Gaspare Sganga - https://gasparesganga.com
 markdown    : kramdown
 kramdown    :
   input : GFM
@@ -9,30 +10,34 @@ kramdown    :
 include : 
   - .htaccess
   - _pages
+
 exclude :
-  - browserslist
+  - .asset-cache
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
   - vendor
 
-gems :
+plugins :
   - jekyll-assets
   - autoprefixer-rails
   - uglifier
 
+
 assets : 
-  assets    : ["[^_]*"]
-  sources   : [_assets]
-  prefix    : /assets
-  cache     : false
-  digest    : true
-  compress  :
-    js                  : true
-    css                 : true
-  features:
-    automatic_img_size  : false
-    automatic_img_alt   : true
-    liquid              : false
-    integrity           : false
+  sources       : [_assets]
+  precompile    : []
+  destination   : /assets
+  digest        : true
+  source_maps   : false
+  compression   : true
+  gzip          : false
+  defaults      :
+    js      : { integrity: true }
+    css     : { integrity: true }
+    img     : { integrity: true }
+  caching       :
+    enabled : false
+  plugins       :
+    css     : { autoprefixer: {}}

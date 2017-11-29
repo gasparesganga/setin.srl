@@ -1,5 +1,7 @@
 source "https://rubygems.org"
-gem "jekyll"
-gem "jekyll-assets"
-gem "autoprefixer-rails"
-gem "uglifier"
+group :jekyll_plugins do
+  gem "jekyll"
+  gem "jekyll-assets"
+  gem "autoprefixer-rails"
+  gem "uglifier"
+end

@@ -9,10 +9,10 @@
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
         <meta name="author" content="{{ site.author }}">
         
+        {% asset img/favicon.ico %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        <link rel="icon" href="{% asset_path img/favicon.ico %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,400italic">
-        {% stylesheet css/style.scss %}
+        {% asset css/style.scss %}
     </head>
     
     <body>

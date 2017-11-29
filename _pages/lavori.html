@@ -21,7 +21,7 @@ permalink   : /lavori/
         {% if mod2 == 0 %}<div class="lavori_wrapper_2">{% endif %}
             <a class="lavori_wrapper_1" href="https://{{ item[0] }}.geo-portale.it" target="_blank">
                 {% capture img_path %}img/lavori/{{ item[0] }}.png{% endcapture %}
-                {% img '{{ img_path }}' %}
+                {% asset '{{ img_path }}' %}
                 <span>{{ item[1] }}</span>
             </a>
     {% endfor %}
