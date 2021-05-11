@@ -21,7 +21,6 @@ exclude :
 
 plugins :
   - jekyll-assets
-  - autoprefixer-rails
   - uglifier
 
 
@@ -39,5 +38,3 @@ assets :
     img     : { integrity: true }
   caching       :
     enabled : false
-  plugins       :
-    css     : { autoprefixer: {}}

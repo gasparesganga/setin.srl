@@ -274,37 +274,37 @@ main {
 }
 
 #cookie_banner {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(80, 130, 0, 0.85);
-    color: #ffffff;
-    fill: #ffffff;
-    z-index: 99;
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: center;
-    transition: all 0.5s ease-out;
+    position            : fixed;
+    bottom              : 0;
+    width               : 100%;
+    display             : flex;
+    flex-flow           : row nowrap;
+    justify-content     : center;
+    align-items         : center;
+    background-color    : rgba(80, 130, 0, 0.85);
+    color               : #ffffff;
+    fill                : #ffffff;
+    z-index             : 99;
+    font-size           : 1rem;
+    padding             : 1rem;
+    text-align          : center;
+    transition          : all 0.5s ease-out;
     &.removed {
-        height: 0;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
+        height          : 0;
+        padding         : 0;
+        margin          : 0;
+        overflow        : hidden;
     }
     svg {
-        flex: 0 0 auto;
-        width: 1rem;
-        margin: 0 1rem;
+        flex    : 0 0 auto;
+        width   : 1rem;
+        margin  : 0 1rem;
     }
     #cookie_banner_ok {
-        width: 4rem;
-        margin-left: 1rem;
-        border-radius: 2px;
-        padding: 0.2rem;
+        width           : 4rem;
+        margin-left     : 1rem;
+        border-radius   : 2px;
+        padding         : 0.2rem;
     }
 }
 
