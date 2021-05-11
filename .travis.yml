@@ -7,5 +7,5 @@ addons:
     packages:
       - lftp
 script:
-  - bundle exec jekyll build --trace
+  - bundle exec jekyll build
   - lftp -c "set sftp:auto-confirm yes ; open -u $DEPLOY_USER,$DEPLOY_PASS sftp://$DEPLOY_HOST ; mirror -R -e _site $DEPLOY_PATH ; quit"

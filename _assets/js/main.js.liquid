@@ -19,7 +19,7 @@
         "element"       : cookieBannerElement,
         "removeClass"   : "removed",
     });
-    $("#cookie_banner_ok").on("click", function(){
+    document.querySelector("#cookie_banner").addEventListener("click", function(){
         cookieBanner.remove(cookieBannerElement);
     });
     

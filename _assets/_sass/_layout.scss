@@ -301,10 +301,25 @@ main {
         margin  : 0 1rem;
     }
     #cookie_banner_ok {
-        width           : 4rem;
-        margin-left     : 1rem;
-        border-radius   : 2px;
-        padding         : 0.2rem;
+        width                   : 4rem;
+        margin-left             : 1rem;
+        padding                 : 0.2rem;
+        font-family             : inherit;
+        font-size               : 1.1rem;
+        font-weight             : normal;
+        text-align              : center;
+        cursor                  : pointer;
+        background-color        : #d0d0d0;
+        color                   : #303030;
+        border                  : none;
+        outline                 : none;
+        border-radius           : 2px;
+        &:hover {
+            background-color    : #ffe580;
+        }
+        &:active {
+            background-color    : #ffd555;
+        }
     }
 }
 
